@@ -238,18 +238,4 @@ Create flags at **PostHog → Feature Flags → New feature flag**.
 - **Data residency:** Using `https://us.i.posthog.com` (US region). Switch to `https://eu.i.posthog.com` for EU data residency
 - **Cookie-free option:** PostHog uses `localStorage` persistence by default (set in init config) — no tracking cookie needed
 
----
 
-## Debugging
-
-### Verify events are firing
-Open browser DevTools → Network tab → filter by `posthog` or `i.posthog.com`. You should see POST requests to `/batch` or `/e/`.
-
-### PostHog toolbar
-Go to **PostHog → Toolbar** → copy the snippet → paste in browser console on your app. This overlays a heatmap and event inspector directly on your site.
-
-### Events not showing up?
-1. Check `NEXT_PUBLIC_POSTHOG_KEY` is set correctly in Replit Secrets
-2. Confirm the key starts with `phc_`
-3. Check the browser network tab for `429` (rate limit) or `401` (wrong key) errors
-4. Make sure you're looking at the right PostHog project
