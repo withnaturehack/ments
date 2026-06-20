@@ -1,37 +1,5 @@
-# Today's Session — Kartik
+# Today's Work — Kartik
 **Date:** June 20, 2026
-
----
-
-## What We Did Today
-
-### 1. Got the App Running on Replit
-- Installed Node.js 20 + all npm packages
-- Created a workflow so the app auto-starts every time you open Replit
-- Fixed a bug where the app wouldn't show in the preview pane (`X-Frame-Options: DENY` was blocking the iframe)
-- App is live at port 5000 — login page loads, Supabase connected
-
-### 2. Set Up All Environment Variables
-Connected the app to your real services:
-- Supabase (database + auth)
-- Upstash Redis (feed caching)
-- SMTP (email)
-- PostHog (analytics)
-
-Still need to add these in the Replit Secrets tab:
-- `SUPABASE_SERVICE_ROLE_KEY`
-- `GROQ_API_KEY`
-- `UPSTASH_REDIS_REST_TOKEN`
-- `SMTP_APP_PASSWORD`
-
-### 3. Added PostHog Analytics
-PostHog key: `phc_vyfwwA5WcFD5DWxtoyoZ98mA2BN7SmmsiFseUshz3pUn`
-
-**What it tracks automatically (zero effort):**
-- Every page visit
-- Every button click
-- Full session recordings (passwords hidden)
-- Who each user is (linked to their Supabase account on login)
 
 **Custom events we wired up:**
 | Action | Event |
